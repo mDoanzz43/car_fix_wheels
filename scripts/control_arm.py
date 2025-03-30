@@ -13,10 +13,8 @@ msg = """
 - Nhấn 'q' để thoát
 """
 
-# Mức điều chỉnh góc mỗi lần nhấn phím (radians)
 step_size = 0.1
 
-# Giá trị ban đầu của các joint
 joint_1_angle = 0.0
 joint_2_angle = 0.0
 

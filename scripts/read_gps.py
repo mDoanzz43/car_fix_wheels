@@ -32,7 +32,7 @@ def gps_listener():
     rospy.Subscriber("/gps/fix", NavSatFix, gps_callback)
     
     rospy.loginfo("🔄 Đang lắng nghe dữ liệu GPS trên /gps/fix...")
-    rospy.spin()  # Giữ chương trình chạy liên tục
+    rospy.spin() 
 
 if __name__ == "__main__":
     try:

@@ -4,17 +4,15 @@ import rospy
 from geometry_msgs.msg import Twist
 import sys, termios, tty
 
-# Tốc độ mặc định
-LINEAR_SPEED = 0.5  # m/s
-ANGULAR_SPEED = 1.0  # rad/s
+LINEAR_SPEED = 0.5  
+ANGULAR_SPEED = 1.0  
 
-# Định nghĩa phím điều khiển
 key_mapping = {
-    'w': (LINEAR_SPEED, 0),   # Tiến tới
-    's': (-LINEAR_SPEED, 0),  # Lùi lại
-    'a': (0, ANGULAR_SPEED),  # Quay trái
-    'd': (0, -ANGULAR_SPEED), # Quay phải
-    'q': "exit"               # Thoát
+    'w': (LINEAR_SPEED, 0),  
+    's': (-LINEAR_SPEED, 0),  
+    'a': (0, ANGULAR_SPEED),  
+    'd': (0, -ANGULAR_SPEED), 
+    'q': "exit"               
 }
 
 def get_key():
@@ -23,7 +21,7 @@ def get_key():
     old_settings = termios.tcgetattr(fd)
     try:
         tty.setraw(sys.stdin.fileno())
-        key = sys.stdin.read(1)  # Đọc một ký tự
+        key = sys.stdin.read(1)  
     finally:
         termios.tcsetattr(fd, termios.TCSADRAIN, old_settings)
     return key
@@ -54,7 +52,7 @@ def teleop_control():
             pub.publish(twist)
             rospy.loginfo(f"Linear: {twist.linear.x}, Angular: {twist.angular.z}")
 
-        elif key == '\x03':  # Nhấn Ctrl+C
+        elif key == '\x03': 
             break
         
         rate.sleep()

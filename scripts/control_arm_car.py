@@ -4,20 +4,26 @@ import rospy
 import sys, termios, tty, select
 from std_msgs.msg import Float64
 from geometry_msgs.msg import Twist
+import os
 
-# Tốc độ xe
-LINEAR_SPEED = 0.5  # m/s
-ANGULAR_SPEED = 1.0  # rad/s
+LINEAR_SPEED = 0.5  
+ANGULAR_SPEED = 1.0  
 
-# Bước điều chỉnh tay máy
 STEP_SIZE = 0.1
 JOINT1_MIN, JOINT1_MAX = -3.14, 3.14
 JOINT2_MIN, JOINT2_MAX = -2.0, 2.0
 
-# Giá trị ban đầu của tay máy
 joint_1_angle = 0.0
 joint_2_angle = 0.0
-
+def print_instructions():
+    """Hiển thị hướng dẫn điều khiển lên màn hình."""
+    # os.system("clear")  
+    print("=== TELEOP CONTROL ===")
+    print("Xe: W - Tiến | S - Lùi | A - Trái | D - Phải | X - Dừng")
+    print("Tay máy: I - Joint1+ | K - Joint1- | J - Joint2+ | L - Joint2-")
+    print("Nhấn Q để thoát.")
+    print("-----------------------------------")
+    
 def get_key():
     """Hàm đọc phím nhấn từ bàn phím mà không cần nhấn Enter."""
     fd = sys.stdin.fileno()
@@ -48,7 +54,7 @@ def teleop_control():
 
     while not rospy.is_shutdown():
         key = get_key()
-        
+        print_instructions()
         # Điều khiển xe
         if key == 'w':
             twist.linear.x = LINEAR_SPEED
