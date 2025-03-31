@@ -1,16 +1,19 @@
 <launch>
   <include
     file="$(find gazebo_ros)/launch/empty_world.launch" />
-    <param name="use_sim_time" value="true"/>
   <arg
     name="model" />
   <param
     name="robot_description"
     textfile="$(find car_fix_wheels)/urdf/car_fix_wheels.urdf" />
   <!-- <node
+    name="joint_state_publisher_gui"
+    pkg="joint_state_publisher_gui"
+    type="joint_state_publisher_gui" /> -->
+  <node
     name="joint_state_publisher"
     pkg="joint_state_publisher"
-    type="joint_state_publisher" /> -->
+    type="joint_state_publisher" /> 
   <node
     name="robot_state_publisher"
     pkg="robot_state_publisher"
@@ -33,7 +36,7 @@
     args="pub /calibrated std_msgs/Bool true" />
   <rosparam file="$(find car_fix_wheels)/config/controllers.yaml" command="load"/>
 
+  <!-- Khởi động bộ điều khiển -->
   <node name="controller_spawner" pkg="controller_manager" type="spawner" respawn="false" output="screen"
         args="joint_state_controller arm_1_joint_controller arm_2_joint_controller" />
 </launch>
-
