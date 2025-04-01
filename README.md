@@ -17,5 +17,16 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 ##### Hình ảnh trong mô phỏng
 ![image](https://github.com/user-attachments/assets/cafd41bc-ec39-40a1-b222-8e21ccae0555)
 #### 2. Cấp quyền cho các file python
-```chmod +x control_arm_car.py```
-```chmod +x control_arm_car.py```
+```chmod +x control_arm_car.py control_arm.py control_car_without_lib.py control_car.py read_gps.py run_x_meters_gps.py```
+#### 3. Điều khiển xe
+```rosrun car_fix_wheels control_car.py``` 
+##### 3.1. Điều khiển xe dựa trên động lực học
+```rosrun car_fix_wheels control_car_without_lib.py```
+#### 4. Điều khiển tay máy
+```rosrun car_fix_wheels control_arm.py```
+#### 5. Điều khiển xe và tay máy 
+```rosrun car_fix_wheels control_arm_car.py```
+#### 6. Đọc cảm biến GPS
+```rosrun car_fix_wheels read_gps.py```
+#### 7. Di chuyển quãng đường chính xác sử dụng cảm biến GPS
+```rosrun run_x_meters_gps.py```
