@@ -4,4 +4,4 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 ### 1. Setup môi trường
 - ROS, Gazebo, Rviz
 - Download source:
-  git clone https://github.com/Dat1908/car_fix_wheels.git
+```git clone https://github.com/Dat1908/car_fix_wheels.git```
