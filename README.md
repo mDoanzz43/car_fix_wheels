@@ -11,3 +11,7 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 ```sudo apt-get install ros-noetic-hector-gazebo-plugins```
 - Đảm bảo không gian làm việc:
 ```source devel/setup.bash```
+### Các bước thực hiện
+#### 1. Chạy Gazebo và Rviz
+```roslaunch car_fix_wheels display.launch```
+![image](https://github.com/user-attachments/assets/d6217b9e-e087-4af9-95e6-9f6c413db5a2)
