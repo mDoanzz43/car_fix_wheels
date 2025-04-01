@@ -30,7 +30,7 @@ class MoveWithGPS:
             distance_traveled = geopy.distance.distance(self.start_latlon, self.current_latlon).m
             rospy.loginfo(f"🚗 Đã đi: {distance_traveled:.2f}m / {self.distance_goal}m")
 
-            if distance_traveled >= self.distance_goal - 0.01:
+            if distance_traveled >= self.distance_goal - 0.05:
                 self.stop()
                 rospy.loginfo("✅ Xe đã đi đủ khoảng cách!")
 
