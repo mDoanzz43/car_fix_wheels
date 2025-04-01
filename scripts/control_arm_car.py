@@ -4,14 +4,13 @@ import rospy
 import sys, termios, tty, select
 from std_msgs.msg import Float64
 from geometry_msgs.msg import Twist
-import os
 
 LINEAR_SPEED = 0.5  
 ANGULAR_SPEED = 1.0  
 
 STEP_SIZE = 0.1
 JOINT1_MIN, JOINT1_MAX = -3.14, 3.14
-JOINT2_MIN, JOINT2_MAX = -2.0, 2.0
+JOINT2_MIN, JOINT2_MAX = -1.57, 1.57
 
 joint_1_angle = 0.0
 joint_2_angle = 0.0
