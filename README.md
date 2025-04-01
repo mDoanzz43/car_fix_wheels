@@ -14,4 +14,8 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 ### Các bước thực hiện
 #### 1. Chạy Gazebo và Rviz
 ```roslaunch car_fix_wheels display.launch```
-![image](https://github.com/user-attachments/assets/d6217b9e-e087-4af9-95e6-9f6c413db5a2)
+##### Hình ảnh trong mô phỏng
+![image](https://github.com/user-attachments/assets/cafd41bc-ec39-40a1-b222-8e21ccae0555)
+#### 2. Cấp quyền cho các file python
+```chmod +x control_arm_car.py```
+```chmod +x control_arm_car.py```
