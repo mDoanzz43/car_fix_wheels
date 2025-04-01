@@ -30,3 +30,5 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 ```rosrun car_fix_wheels read_gps.py```
 #### 7. Di chuyển quãng đường chính xác sử dụng cảm biến GPS
 ```rosrun run_x_meters_gps.py```
+##### Kết quả
+![image](https://github.com/user-attachments/assets/4dbdaf52-18b8-4e3d-9577-abe4ebd02afb)
