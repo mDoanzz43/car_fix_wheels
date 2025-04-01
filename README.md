@@ -5,3 +5,9 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 - ROS, Gazebo, Rviz
 - Download source:
 ```git clone https://github.com/Dat1908/car_fix_wheels.git```
+- Cài đặt môi trường cho python:
+```pip install -r requirements.txt```
+- Cài đặt thư viện để đọc GPS:
+```sudo apt-get install ros-noetic-hector-gazebo-plugins```
+- Đảm bảo không gian làm việc:
+```source devel/setup.bash```
