@@ -10,7 +10,7 @@ Mô phỏng xe 2 bánh vi sai và tay máy trong gazebo và mô tả trong rviz.
 - Cài đặt thư viện để đọc GPS:
 ```sudo apt-get install ros-noetic-hector-gazebo-plugins```
 - Đảm bảo không gian làm việc:
-```source devel/setup.bash```
+```catkin_make``` -> ```source devel/setup.bash```
 ### Các bước thực hiện
 #### 1. Chạy Gazebo và Rviz
 ```roslaunch car_fix_wheels display.launch```
