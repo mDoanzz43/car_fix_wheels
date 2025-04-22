@@ -8,10 +8,6 @@
     <pose>1 0 0 0 0 0</pose> 
   </include>
   
-  <include>
-    <uri>model://Chair</uri>
-  </include>
-
   <!-- Ánh sáng -->
   <include>
     <uri>model://sun</uri>
