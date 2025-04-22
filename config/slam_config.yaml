@@ -1,0 +1,15 @@
+maxUrange: 3.5
+maxRange: 8.0
+minimumScore: 50
+delta: 0.05
+iterations: 5
+linearUpdate: 0.2
+angularUpdate: 0.2
+particles: 30
+resampleThreshold: 0.5
+mapUpdateInterval: 2.0
+temporalUpdate: -1.0
+xMax: 10.0
+xMin: -10.0
+yMax: 10.0
+yMin: -10.0
