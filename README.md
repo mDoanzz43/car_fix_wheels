@@ -12,6 +12,7 @@ Xây dựng và điều khiển xe 2 bánh vi sai. Xe có thể sử dụng keyb
 - Đảm bảo không gian làm việc:
 ```catkin_make``` -> ```source devel/setup.bash```
 - Export path: export GAZEBO_MODEL_PATH=~/ck2_ws/src/car_fix_wheels/models:$GAZEBO_MODEL_PATH
+!Note: Thay thế ck2_ws bằng đường dẫn của bạn
 ### Các bước thực hiện
 #### 1. Chạy Gazebo và Rviz
 ``` bash 
@@ -64,6 +65,7 @@ roslaunch car_fix_wheels gazebo.launch
 roslaunch car_fix_wheels robot_navigation.launch map_file:=$HOME/map.yaml
 ```
 #### 10. Phát hiện người 
+! Note: Thay thế 2 path trong file detect.py thành đường dẫn của mình
 ```bash
 roslaunch car_fix_wheels detect.launch
 ```
