@@ -14,34 +14,65 @@ Xây dựng và điều khiển xe 2 bánh vi sai. Xe có thể sử dụng keyb
 - Export path: export GAZEBO_MODEL_PATH=~/ck2_ws/src/car_fix_wheels/models:$GAZEBO_MODEL_PATH
 ### Các bước thực hiện
 #### 1. Chạy Gazebo và Rviz
-```roslaunch car_fix_wheels display.launch```
+``` bash 
+roslaunch car_fix_wheels display.launch
+```
+
 ##### Hình ảnh trong mô phỏng
 ![image](https://github.com/user-attachments/assets/cafd41bc-ec39-40a1-b222-8e21ccae0555)
 #### 2. Cấp quyền cho các file python
-```chmod +x control_arm_car.py control_arm.py control_car_without_lib.py control_car.py read_gps.py run_x_meters_gps.py detect.py```
+```bash
+chmod +x control_arm_car.py control_arm.py control_car_without_lib.py control_car.py read_gps.py run_x_meters_gps.py detect.py
+```
 #### 3. Điều khiển xe
-```rosrun car_fix_wheels control_car.py``` 
+```bash 
+rosrun car_fix_wheels control_car.py
+``` 
 ##### 3.1. Điều khiển xe dựa trên động lực học
-```rosrun car_fix_wheels control_car_without_lib.py```
+```bash 
+rosrun car_fix_wheels control_car_without_lib.py
+```
 #### 4. Điều khiển tay máy
-```rosrun car_fix_wheels control_arm.py```
+```bash 
+rosrun car_fix_wheels control_arm.py
+```
 #### 5. Điều khiển xe và tay máy 
-```rosrun car_fix_wheels control_arm_car.py```
+```bash 
+rosrun car_fix_wheels control_arm_car.py
+```
 #### 6. Đọc cảm biến GPS
-```rosrun car_fix_wheels read_gps.py```
+```bash
+rosrun car_fix_wheels read_gps.py
+```
 #### 7. Di chuyển quãng đường chính xác sử dụng cảm biến GPS
-```rosrun run_x_meters_gps.py```
+```bash
+rosrun run_x_meters_gps.py
+```
 #### 8. Chạy Slam cho Robot 
-```roslaunch car_fix_wheels gmapping.launch```
+```bash
+roslaunch car_fix_wheels gmapping.launch
+```
 và sử dụng bàn phím để quét map
-```rosrun car_fix_wheels control_car_without_lib.py```
-#### 7. Chạy Navigation cho Robot
-```roslaunch car_fix_wheels gazebo.launch```
-```roslaunch car_fix_wheels robot_navigation.launch map_file:=$HOME/map.yaml```
-#### 7. Phát hiện ngườ
-```roslaunch car_fix_wheels detect.launch```
-```rosrun car_fix_wheels detect.py```
-```rosrun car_fix_wheels control_car_without_lib.py```
+```bash
+rosrun car_fix_wheels control_car_without_lib.py
+```
+#### 9. Chạy Navigation cho Robot
+```bash
+roslaunch car_fix_wheels gazebo.launch
+```
+```bash
+roslaunch car_fix_wheels robot_navigation.launch map_file:=$HOME/map.yaml
+```
+#### 10. Phát hiện người 
+```bash
+roslaunch car_fix_wheels detect.launch
+```
+```bash 
+rosrun car_fix_wheels detect.py
+```
+```bash
+rosrun car_fix_wheels control_car_without_lib.py
+```
 ##### Kết quả
 ![image](https://github.com/user-attachments/assets/4dbdaf52-18b8-4e3d-9577-abe4ebd02afb)
 ##### Link video demo: 
