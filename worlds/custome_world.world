@@ -2,16 +2,6 @@
 <sdf version="1.6">
 <world name="maze_map">
 
-  <!-- Người -->
-  <include>
-    <uri>model://Standing_person</uri>
-    <pose>1 0 0 0 0 0</pose> 
-  </include>
-  
-  <include>
-    <uri>model://Chair</uri>
-  </include>
-
   <!-- Ánh sáng -->
   <include>
     <uri>model://sun</uri>

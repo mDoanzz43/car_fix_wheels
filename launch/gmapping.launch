@@ -35,7 +35,6 @@
       <param name="delta" value="0.05"/>
       <param name="particles" value="30"/>
       <remap from="scan" to="/scan"/>
-      <!-- <rosparam command="load" file="$(find car_fix_wheels)/config/slam_config.yaml"/> -->
     </node>
   
     <!-- Mở RViz với config -->

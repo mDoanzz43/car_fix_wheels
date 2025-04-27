@@ -1,0 +1,33 @@
+<launch>
+  <!-- Arguments -->
+  <arg name="map_file" default="$(find car_fix_wheels)/maps/map.yaml"/>
+  <arg name="open_rviz" default="true"/>
+  <arg name="move_forward_only" default="false"/>
+
+  <!-- Param dùng chung -->
+  <param name="use_sim_time" value="true"/>
+
+  <!-- Map server -->
+  <node pkg="map_server" name="map_server" type="map_server" args="$(arg map_file)">
+    <param name="use_sim_time" value="true"/>
+  </node>
+
+  <!-- AMCL -->
+  <include file="$(find car_fix_wheels)/launch/amcl.launch">
+    <arg name="use_sim_time" value="true"/>
+  </include>
+
+  <!-- move_base -->
+  <include file="$(find car_fix_wheels)/launch/move_base.launch">
+    <arg name="move_forward_only" value="$(arg move_forward_only)"/>
+    <arg name="use_sim_time" value="true"/>
+  </include>
+
+  <!-- rviz -->
+  <group if="$(arg open_rviz)"> 
+    <node pkg="rviz" type="rviz" name="rviz" required="true"
+          args="-d $(find car_fix_wheels)/rviz/robot_navigation.rviz">
+      <param name="use_sim_time" value="true"/>
+    </node>
+  </group>
+</launch>
