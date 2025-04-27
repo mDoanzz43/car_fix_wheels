@@ -12,6 +12,7 @@ Xây dựng và điều khiển xe 2 bánh vi sai. Xe có thể sử dụng keyb
 - Đảm bảo không gian làm việc:
 ```catkin_make``` -> ```source devel/setup.bash```
 - Export path: export GAZEBO_MODEL_PATH=~/ck2_ws/src/car_fix_wheels/models:$GAZEBO_MODEL_PATH
+  
 !Note: Thay thế ck2_ws bằng đường dẫn của bạn
 ### Các bước thực hiện
 #### 1. Chạy Gazebo và Rviz
