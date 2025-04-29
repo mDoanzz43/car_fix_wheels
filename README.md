@@ -24,7 +24,7 @@ roslaunch car_fix_wheels display.launch
 ![image](https://github.com/user-attachments/assets/cafd41bc-ec39-40a1-b222-8e21ccae0555)
 #### 2. Cấp quyền cho các file python
 ```bash
-chmod +x control_arm_car.py control_arm.py control_car_without_lib.py control_car.py read_gps.py run_x_meters_gps.py detect.py
+chmod +x control_arm_car.py control_arm.py control_car_without_lib.py control_car.py detect.py
 ```
 #### 3. Điều khiển xe
 ```bash 
@@ -41,16 +41,8 @@ rosrun car_fix_wheels control_arm.py
 #### 5. Điều khiển xe và tay máy 
 ```bash 
 rosrun car_fix_wheels control_arm_car.py
-```
-#### 6. Đọc cảm biến GPS
-```bash
-rosrun car_fix_wheels read_gps.py
-```
-#### 7. Di chuyển quãng đường chính xác sử dụng cảm biến GPS
-```bash
-rosrun run_x_meters_gps.py
-```
-#### 8. Chạy Slam cho Robot 
+
+#### 6. Chạy Slam cho Robot 
 ```bash
 roslaunch car_fix_wheels gmapping.launch
 ```
@@ -58,14 +50,14 @@ và sử dụng bàn phím để quét map
 ```bash
 rosrun car_fix_wheels control_car_without_lib.py
 ```
-#### 9. Chạy Navigation cho Robot
+#### 7. Chạy Navigation cho Robot
 ```bash
 roslaunch car_fix_wheels gazebo.launch
 ```
 ```bash
 roslaunch car_fix_wheels robot_navigation.launch map_file:=$HOME/map.yaml
 ```
-#### 10. Phát hiện người 
+#### 8. Phát hiện người 
 ! Note: Thay thế 2 path trong file detect.py thành đường dẫn của mình
 ```bash
 roslaunch car_fix_wheels detect.launch
@@ -78,5 +70,4 @@ rosrun car_fix_wheels control_car_without_lib.py
 ```
 ##### Kết quả
 ![image](https://github.com/user-attachments/assets/4dbdaf52-18b8-4e3d-9577-abe4ebd02afb)
-##### Link video demo: 
-https://youtu.be/oKi8eqXXKbI
+##### Link video: https://drive.google.com/drive/folders/1CTKG4Qoo8zRXEgRNgq9gwJ19Y8CFDoU-?usp=sharing
