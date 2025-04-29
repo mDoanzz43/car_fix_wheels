@@ -69,5 +69,14 @@ rosrun car_fix_wheels detect.py
 rosrun car_fix_wheels control_car_without_lib.py
 ```
 ##### Kết quả
-![image](https://github.com/user-attachments/assets/4dbdaf52-18b8-4e3d-9577-abe4ebd02afb)
+- Robot khi Slam:
+  ![image](https://github.com/user-attachments/assets/e27b7a09-62f4-4d05-ba21-1ba754fe08a6)
+
+- Robot khi navigation:
+  ![image](https://github.com/user-attachments/assets/7b93ee8c-4b56-435a-8616-57cb954ce15f)
+
+- Robot khi sử dụng model Yolov3_tiny để detect người:
+  ![image](https://github.com/user-attachments/assets/8e00bd0d-732f-4bfa-b3b0-44e918b2c6c8)
+
+
 ##### Link video: https://drive.google.com/drive/folders/1CTKG4Qoo8zRXEgRNgq9gwJ19Y8CFDoU-?usp=sharing
